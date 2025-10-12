@@ -16,6 +16,11 @@
 		<defName>Ketchup_Plant_Tomato</defName>
 		<label>tomato plant</label>
 		<description>A cultivated plant that yields juicy tomatoes when mature.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Nutrition>0.2</Nutrition>
+		</statBases>
+		<ingestible />
 		<plant>
 			<sowWork>250</sowWork>
 			<sowMinSkill>6</sowMinSkill>
@@ -52,5 +57,12 @@
 				<rotDestroys>true</rotDestroys>
 			</li>
 		</comps>
+		<statBases>
+			<Nutrition>0.05</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>VegetableOrFruit</foodType>
+			<preferability>RawBad</preferability>
+		</ingestible>
 	</ThingDef>
 </Defs>

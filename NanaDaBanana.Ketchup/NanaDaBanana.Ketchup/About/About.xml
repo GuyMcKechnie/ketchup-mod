@@ -4,10 +4,7 @@
 	<author>NanaDaBanana</author>
 	<packageId>NanaDaBanana.Ketchup</packageId>
 
-	<description>
-		Work in progress! This mod is currently under development. At this stage, tomatoes are the only thing implemented—your colonists can grow tomatoes and craft ketchup. More features and content will be added in future updates.
-	</description>
-	<!-- appears in mod list -->
+	<description>Adds ketchup to RimWorld! Now your colonists can enjoy tomato-based condiments with their meals. Craft ketchup from tomatoes and enjoy enhanced meal satisfaction. This mod adds tomatoes as a new crop (including both the plant and item) for your colonists to grow, and introduces ketchup bottles as a craftable food item. Note: Using ketchup as a condiment is not implemented yet. More features and content will be added in future updates.</description>
 
 	<supportedVersions>
 		<!-- used by version check warning -->
