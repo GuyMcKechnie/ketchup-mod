@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="ItemWithComps">
-		<defName>KetchupBottle</defName>
+	<ThingDef ParentName="MealBase">
+		<defName>Ketchup_Item_KetchupBottle</defName>
 		<label>ketchup bottle</label>
 		<description>A bottle of delicious ketchup. Perfect for enhancing the flavor of your meals.</description>
 		<graphicData>
-			<texPath>Textures/NanaDaBanana.Ketchup/KetchupBottle</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>NanaDaBanana_Ketchup/KetchupBottle</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<stackLimit>25</stackLimit>
 		<statBases>
@@ -20,19 +20,14 @@
 		<ingestible>
 			<preferability>RawBad</preferability>
 			<foodType>VegetableOrFruit</foodType>
-			<tasteThought>FoodAteRaw</tasteThought>
+			<tasteThought>AteRawFood</tasteThought>
 			<ingestEffect>EatVegetarian</ingestEffect>
-			<ingestSound>IngestVegetarian</ingestSound>
 			<joy>0.02</joy>
 			<joyKind>Gluttonous</joyKind>
 		</ingestible>
-		<thingClass>NanaDaBanana.Ketckup.Assemblies.Items.KetchupBottle</thingClass>
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>
-		<thingCategories>
-			<li>FoodMeals</li>
-		</thingCategories>
 		<tradeTags>
 			<li>Exotic</li>
 		</tradeTags>

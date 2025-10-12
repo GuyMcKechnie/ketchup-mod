@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Ketchup</name>
-  <author>NanaDaBanana</author>
-  <packageId>NanaDaBanana.Ketchup</packageId>
+	<name>Ketchup</name>
+	<author>NanaDaBanana</author>
+	<packageId>NanaDaBanana.Ketchup</packageId>
 
-  <description>Adds ketchup to RimWorld! Now your colonists can enjoy tomato-based condiments with their meals. Craft ketchup from tomatoes and enjoy enhanced meal satisfaction.</description> <!-- appears in mod list -->
+	<description>
+		Work in progress! This mod is currently under development. At this stage, tomatoes are the only thing implemented—your colonists can grow tomatoes and craft ketchup. More features and content will be added in future updates.
+	</description>
+	<!-- appears in mod list -->
 
-  <supportedVersions>
-    <!-- used by version check warning -->
-    <li>1.6</li>
-  </supportedVersions>
+	<supportedVersions>
+		<!-- used by version check warning -->
+		<li>1.6</li>
+	</supportedVersions>
 
-  <!--
+	<!--
     Adopted from Mod Manager, these next two settings are used by both vanilla and Mod Manager
     to alert the player of incorrect mod load order, and wire up the auto-sort button
 
@@ -19,6 +22,6 @@
     Duplicate code creates opportunity to change one but not the other, and the fewer opportunities for trouble to arise the better.
     Pre-bug hunting ounce of prevention
     -->
-  <loadBefore></loadBefore>
-  <loadAfter></loadAfter>
+	<loadBefore></loadBefore>
+	<loadAfter></loadAfter>
 </ModMetaData>
