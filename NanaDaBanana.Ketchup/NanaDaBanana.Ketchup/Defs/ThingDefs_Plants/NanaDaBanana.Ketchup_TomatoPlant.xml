@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Abstract Base: TomatoBase -->
+	<ThingDef ParentName="PlantBase" Name="TomatoBase" Abstract="True">
+		<graphicData>
+			<texPath>NanaDaBanana_Ketchup/MatureTomato/MatureTomato_A</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		
+	</ThingDef>
+
+	<!-- Cultivated tomato -->
+	<!-- This ThingDef will inherit all fields from the abstract base TomatoBase -->
+	<ThingDef ParentName="TomatoBase">
+		<defName>Ketchup_Plant_Tomato</defName>
+		<label>tomato plant</label>
+		<description>A cultivated plant that yields juicy tomatoes when mature.</description>
+		<plant>
+			<sowWork>250</sowWork>
+			<sowMinSkill>6</sowMinSkill>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<purpose>Food</purpose>
+			<immatureGraphicPath>NanaDaBanana_Ketchup/ImmatureTomato/ImmatureTomato_A</immatureGraphicPath>
+			<growDays>8</growDays>
+			<dieIfLeafless>false</dieIfLeafless>
+			<harvestWork>400</harvestWork>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>Ketchup_Plant_Tomato_Raw</harvestedThingDef>
+			<harvestYield>8</harvestYield>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>0.3~1.0</visualSizeRange>
+			<wildOrder>2</wildOrder>
+			<allowAutoCut>false</allowAutoCut>
+		</plant>
+	</ThingDef>
+
+	<!-- Raw Tomato -->
+	<ThingDef ParentName="PlantFoodRawBase">
+		<defName>Ketchup_Plant_Tomato_Raw</defName>
+		<label>raw tomato</label>
+		<description>A freshly harvested tomato, ready for use.</description>
+		<graphicData>
+			<texPath>NanaDaBanana_Ketchup/RawTomato/RawTomato_A</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

@@ -4,6 +4,9 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <BaseOutputPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\KetchupMod\Assemblies</BaseOutputPath>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,8 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assemblies\" />
-    <Folder Include="Defs\" />
     <Folder Include="Languages\" />
     <Folder Include="Textures\" />
     <Folder Include="Sounds\" />
