@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MealCooked">
+		<defName>MealSimpleKetchup</defName>
+		<label>simple meal with ketchup</label>
+		<description>A simple meal quickly cooked from one main ingredient, with ketchup added for extra flavor.</description>
+		<graphicData>
+			<texPath>NanaDaBanana_Ketchup/SimpleKetchup</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>18</MarketValue>
+			<WorkToMake>320</WorkToMake>
+			<Nutrition>0.95</Nutrition>
+		</statBases>
+		<ingestible>
+			<preferability>MealSimple</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<tasteThought>AteMealWithKetchup</tasteThought>
+			<optimalityOffsetFeedingAnimals>-20</optimalityOffsetFeedingAnimals>
+		</ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="MealFineBase">
+		<defName>MealFineKetchup</defName>
+		<label>fine meal with ketchup</label>
+		<description>A complex dish assembled with care from a variety of ingredients, with ketchup added for extra flavor.</description>
+		<graphicData>
+			<texPath>NanaDaBanana_Ketchup/FineKetchup</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Ingredients">
+				<splitTransferableFoodKind>true</splitTransferableFoodKind>
+			</li>
+		</comps>
+		<ingestible>
+			<preferability>MealFine</preferability>
+			<tasteThought>AteMealWithKetchup</tasteThought>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<optimalityOffsetFeedingAnimals>-75</optimalityOffsetFeedingAnimals>
+		</ingestible>
+	</ThingDef>
+
+	<ThingDef ParentName="MealLavishBase">
+		<defName>MealLavishKetchup</defName>
+		<label>lavish meal with ketchup</label>
+		<description>A masterpiece of the culinary arts, with ketchup added for extra flavor. This meal nourishes the body, mind, and soul.</description>
+		<graphicData>
+			<texPath>NanaDaBanana_Ketchup/LavishKetchup</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Ingredients">
+				<splitTransferableFoodKind>true</splitTransferableFoodKind>
+			</li>
+		</comps>
+		<ingestible>
+			<preferability>MealLavish</preferability>
+			<tasteThought>AteMealWithKetchup</tasteThought>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<optimalityOffsetFeedingAnimals>-100</optimalityOffsetFeedingAnimals>
+		</ingestible>
+	</ThingDef>
+
+	<RecipeDef ParentName="CookMealBase">
+		<defName>MealSimpleKetchup</defName>
+		<label>cook simple meal with ketchup</label>
+		<description>Cook a straightforward meal from one ingredient, with ketchup added for extra flavor.</description>
+		<jobString>Cooking simple meal with ketchup.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>FoodRaw</li>
+					</categories>
+				</filter>
+				<count>0.5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Ketchup_Item_KetchupBottle</li>
+					</thingDefs>
+				</filter>
+				<count>0.05</count>
+			</li>
+		</ingredients>
+		<products>
+			<MealSimpleKetchup>1</MealSimpleKetchup>
+		</products>
+		<workSkill>Cooking</workSkill>
+		<displayPriority>100</displayPriority>
+	</RecipeDef>
+
+	<RecipeDef ParentName="CookMealFineBase">
+		<defName>MealFineKetchup</defName>
+		<label>cook fine meal with ketchup</label>
+		<description>Cook a somewhat complex meal from a combination of meat and plant ingredients, with ketchup added for extra flavor.</description>
+		<jobString>Cooking fine meal with ketchup.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>protein</customSummary>
+					<categories>
+						<li>MeatRaw</li>
+						<li>AnimalProductRaw</li>
+					</categories>
+				</filter>
+				<count>0.25</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>0.25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Ketchup_Item_KetchupBottle</li>
+					</thingDefs>
+				</filter>
+				<count>0.05</count>
+			</li>
+		</ingredients>
+		<products>
+			<MealFineKetchup>1</MealFineKetchup>
+		</products>
+		<displayPriority>200</displayPriority>
+	</RecipeDef>
+
+	<RecipeDef ParentName="CookMealLavishBase">
+		<defName>MealLavishKetchup</defName>
+		<label>cook lavish meal with ketchup</label>
+		<description>Cook a very complex meal from a combination of meat and plant ingredients, with ketchup added for extra flavor.</description>
+		<jobString>Cooking lavish meal with ketchup.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>protein</customSummary>
+					<categories>
+						<li>MeatRaw</li>
+						<li>AnimalProductRaw</li>
+					</categories>
+				</filter>
+				<count>0.5</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>0.5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Ketchup_Item_KetchupBottle</li>
+					</thingDefs>
+				</filter>
+				<count>0.05</count>
+			</li>
+		</ingredients>
+		<products>
+			<MealLavishKetchup>1</MealLavishKetchup>
+		</products>
+		<displayPriority>300</displayPriority>
+	</RecipeDef>
+</Defs>

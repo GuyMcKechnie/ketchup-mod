@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThoughtDef>
+		<defName>AteMealWithKetchup</defName>
+		<durationDays>0.5</durationDays>
+		<stages>
+			<li>
+				<label>ate meal with ketchup</label>
+				<description>That meal had ketchup! Delicious.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>AteFineMealWithKetchup</defName>
+		<durationDays>0.5</durationDays>
+		<stages>
+			<li>
+				<label>ate fine meal with ketchup</label>
+				<description>That meal had ketchup! Delicious.</description>
+				<baseMoodEffect>7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>AteLavishMealWithKetchup</defName>
+		<durationDays>0.5</durationDays>
+		<stages>
+			<li>
+				<label>ate lavish meal with ketchup</label>
+				<description>That meal had ketchup! Delicious.</description>
+				<baseMoodEffect>14</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>
